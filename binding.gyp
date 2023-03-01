@@ -25,7 +25,7 @@
     'msvs_settings': {
       'VCCLCompilerTool': { 'ExceptionHandling': 1 },
     },
-    'defines': [ 'NODE_API_NO_EXTERNAL_BUFFERS_ALLOWED' ],
+    'defines': [  ],
     'conditions': [
       ['OS=="win"', {
         'sources': [
