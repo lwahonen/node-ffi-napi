@@ -1,6 +1,6 @@
 {
   "name": "@lwahonen/ffi-napi",
-  "version": "4.0.10",
+  "version": "4.0.11",
   "license": "MIT",
   "author": "Anna Henningsen <anna@addaleax.net>",
   "contributors": [
@@ -29,7 +29,7 @@
     "debug": "^4.1.1",
     "get-uv-event-loop-napi-h": "^1.0.5",
     "node-addon-api": "^3.2.1",
-    "@lwahonen/ref-napi": "^4.0.6",
+    "@lwahonen/ref-napi": "^4.0.7",
     "ref-struct-di": "^1.1.0",
     "node-gyp-build": "^4.5.0"
   },
