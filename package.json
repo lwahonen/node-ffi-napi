@@ -1,12 +1,13 @@
 {
   "name": "@lwahonen/ffi-napi",
-  "version": "4.0.12",
+  "version": "4.0.13",
   "license": "MIT",
-  "author": "Anna Henningsen <anna@addaleax.net>",
+  "author": "LWAhonen@github",
   "contributors": [
     "Rick Branson <rick@diodeware.com>",
     "Nathan Rajlich <nathan@tootallnate.net>",
-    "Gabor Mezo <gabor.mezo@outlook.com>"
+    "Gabor Mezo <gabor.mezo@outlook.com>",
+    "Anna Henningsen <anna@addaleax.net>"
   ],
   "description": "A foreign function interface (FFI) for Node.js, N-API style, with \"v8::ArrayBuffer::GetBackingStore\" patch",
   "keywords": [
@@ -47,7 +48,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/node-ffi-napi/node-ffi-napi.git"
+    "url": "http://github.com/lwahonen/node-ffi-napi.git"
   },
   "bugs": {
     "url": "http://github.com/node-ffi-napi/node-ffi-napi/issues"
