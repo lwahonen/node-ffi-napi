@@ -46,7 +46,7 @@ jobs:
         shell: bash
       - run: node-gyp configure
         shell: bash
-      - if: matrix.node-version != "16.x"
+      - if: matrix.node-version != 16
         run: node-gyp rebuild
         shell: bash
   
