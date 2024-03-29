@@ -20,6 +20,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+      - run: |
+          node-gyp --version || true
+          gyp --version || true
+          npm config list -l
+          npm install --global node-gyp@latest
+          node-gyp --version
+          npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js
+          node-gyp --version
       - name: install dependencies and test
         shell: bash
         run: |
