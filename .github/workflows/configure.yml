@@ -23,11 +23,13 @@ jobs:
       - run: |
           node-gyp --version || true
           npm install --global node-gyp
+          node-gyp --version
           npm install
+          npm run
           npm test || true  # Why are there no tests?
         shell: bash
-      - run: node-gyp configure || true  # Does this fail?
+      - run: node-gyp configure
         shell: bash
-      - run: node-gyp rebuild || true  # Does this fail?
+      - run: node-gyp rebuild
         shell: bash
   
