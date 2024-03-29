@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [18.x, 20.x, latest]
+        node-version: [16.x, 18.x, 20.x, latest]
         os: [windows-latest, ubuntu-latest, macos-latest]
     steps:
       - name: Checkout repository
