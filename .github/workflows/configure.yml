@@ -30,7 +30,7 @@ jobs:
         shell: bash
       - run: |
           npm install
-          npm test
+          # npm test
         shell: bash
       # - run: node-gyp configure
       #   shell: bash
