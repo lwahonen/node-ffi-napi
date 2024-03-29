@@ -22,11 +22,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: |
           node-gyp --version || true
-          npm config list -l
-          npm install --global node-gyp@latest
+          # npm config list -l
+          npm install --global node-gyp
           node-gyp --version
-          npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js
-          npm config list -l
+          # npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js
+          # npm config list -l
         shell: bash
       - run: npm install
         shell: bash
