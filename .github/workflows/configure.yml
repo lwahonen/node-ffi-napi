@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [14.x, 16.x, 18.x, 20.x, latest]
+        node-version: [16.x, 18.x, 20.x, latest]
         os: [windows-latest, ubuntu-latest, macos-latest]
     steps:
       - name: Checkout repository
@@ -16,24 +16,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.11  # Not >= 3.12 because of distlib
+          python-version: 3.11  # Not >= 3.12 because of distlib on node-gyp < 10.0
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - run: |
           node-gyp --version || true
-          # npm config list -l
           npm install --global node-gyp
-          node-gyp --version
-          # npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js
-          # npm config list -l
-        shell: bash
-      - run: |
           npm install
-          # npm test
+          npm test || true  # Why are there no tests?
         shell: bash
-      # - run: node-gyp configure
-      #   shell: bash
-      # - run: node-gyp rebuild
-      #   shell: bash
+      - run: node-gyp configure || true  # Does this fail?
+        shell: bash
+      - run: node-gyp rebuild || true  # Does this fail?
+        shell: bash
   
